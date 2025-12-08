@@ -1,0 +1,10 @@
+{% extends "resources/views/layouts/base.njk" %}
+{% block bodyContent %}
+  {% include "resources/views/sections/header.njk"  %}
+  <main class="pt-16 laptop:pt-header-offset grow bg-main">
+    {% include "resources/views/sections/hero.njk"  %}
+    {% include "resources/views/sections/tools.njk"  %}
+    {% include "resources/views/sections/advantages.njk"  %}
+  </main>
+  {% include "resources/views/sections/footer.njk"  %}
+{% endblock %}

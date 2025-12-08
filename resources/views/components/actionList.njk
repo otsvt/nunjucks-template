@@ -1,0 +1,24 @@
+{% set actionItems = [
+    {href: '#1', label: 'Все'},
+    {href: '#2', label: 'Конвертировать'},
+    {href: '#3', label: 'Редактировать'},
+    {href: '#4', label: 'Безопасность'},
+    {href: '#5', label: 'Картинки'},
+    {href: '#6', label: 'Другое'}
+  ]
+%}
+{% set currentAction = 'Все' %}
+
+<ul class="flex flex-wrap gap-2">
+  {% for action in actionItems %}
+    <li>
+      <a class="py-1 px-2 flex items-center justify-center text-12-16-1680 rounded-[3.5rem] shadow-action transition-opacity hover:opacity-80 active:opacity-80
+        {% if action.label === currentAction %}
+          text-primary-active bg-white
+        {% else %}
+          text-white bg-primary 
+        {% endif %}
+      " href="{{action.href}}">{{ action.label }}</a>
+    </li>
+  {% endfor %}
+</ul>

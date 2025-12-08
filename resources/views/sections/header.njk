@@ -1,0 +1,25 @@
+{% set navItems = [
+    {href: '#1', label: 'Документ в PDF'},
+    {href: '#2', label: 'Разделить PDF'},
+    {href: '#3', label: 'Сжать PDF'},
+    {href: '#4', label: 'PDF в Word'}
+  ]
+%}
+
+<header class="fixed z-50 top-0 w-full bg-white shadow-header">
+  <section class="page-container py-2 laptop:py-3.5 flex flex-col laptop:items-center laptop:flex-row">
+    <section class="grow flex items-center justify-between">
+      <section class="flex items-center gap-20 2xl:gap-24">
+        <a href="/">
+          <img class='laptop:w-[9.065rem]' src="/resources/images/icons/logo.svg" alt="">
+        </a>
+        {% include "resources/views/components/menuNavigationDesktop.njk" %}
+      </section>
+      <section class="flex items-center gap-5">
+        {% include "resources/views/components/menuLanguage.njk" %}
+        {% include "resources/views/components/menuButton.njk" %}
+      </section>
+    </section>
+    {% include "resources/views/components/menuNavigationMobile.njk" %}
+  </section>
+</header>

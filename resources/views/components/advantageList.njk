@@ -1,0 +1,42 @@
+<section class="relative tablet:-left-10 laptop:left-0 flex flex-col tablet:flex-row items-center tablet:items-start gap-1 tablet:gap-5">
+  <div class="p-3 flex justify-center items-center rounded-full bg-pale-icon">
+      <img class="max-h-6 max-w-6" src="/resources/images/icons/{{ advantage.icon }}.svg" alt="">
+  </div>
+  <section class="flex flex-col gap-2">
+    <header class="text-center tablet:text-start">
+      <h4 class="text-24-30-864 text-primary font-medium">{{ advantage.label }}</h4>
+    </header>
+    <section class="max-w-xl text-lg">
+      {% if advantage.p %}
+        <p>{{ advantage.p }}</p>
+      {% endif %}
+
+      {% if advantage.ol %}
+        <ol class="list-decimal list-inside marker:text-marker 
+          {% if advantage.p %}
+            mt-2
+          {% endif %}
+        ">
+          {% for item in advantage.ol %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+
+      {% if advantage.ul %}
+        <ul class="list-inside
+          {% if advantage.p %}
+            mt-2
+          {% endif %}
+        ">
+          {% for item in advantage.ul %}
+            <li class="flex gap-2">
+              <span class="text-marker">-</span>
+              <span>{{ item }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  </section>
+</section>

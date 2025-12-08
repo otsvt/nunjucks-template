@@ -1,0 +1,37 @@
+{% set languages = ['EN', 'RU', 'DE'] %}
+{% set currentLanguage = 'RU' %}
+
+{% if placement is not defined %}
+  {% set placement = 'bottom' %}
+{% endif %}
+
+{% if placement == 'top' %}
+  {% set menuPositionClass = 'bottom-[calc(100%+0.875rem)]' %}
+{% else %}
+  {% set menuPositionClass = 'top-[calc(100%+0.875rem)]' %}
+{% endif %}
+
+<section data-menu-language-root class="relative">
+  <button data-menu-language-button class="flex items-center gap-2 cursor-pointer">
+    <span data-menu-language-text class="text-xl uppercase text-accent transition-colors">{{ currentLanguage }}</span>
+    <div data-menu-language-icon-wrapper class="h-[22px] aspect-square flex items-center justify-center rounded-full bg-accent transition-colors">
+      <img data-menu-language-icon class="transition-transform" src="/resources/images/icons/caret-down.svg" alt="">
+    </div>
+  </button>
+  <menu data-menu-language-list class="py-4 absolute {{ menuPositionClass }} left-1/2 -translate-x-1/2 flex flex-col gap-2 rounded-2xl opacity-0 pointer-events-none transition-opacity bg-white shadow-2xs">
+    {% for language in languages %}
+      <li class="w-full ">
+        <button class="pl-4 px-12 w-full uppercase cursor-pointer transition-colors hover:bg-accent/20 active:bg-accent/20 
+          {% if language === currentLanguage  %}
+            text-accent
+          {% else %}
+            text-dark
+          {% endif %}
+        ">
+          {{ language }}
+        </button>
+      </li>
+    {% endfor %}
+  </menu>
+</section>
+

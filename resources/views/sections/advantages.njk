@@ -1,0 +1,42 @@
+{% set advantages = [
+  {
+    label: 'Простота и скорость',
+    p: 'Загрузите ваш PDF-файл, выберите нужный формат и запустите процесс. Наш интеллектуальный движок сделает всё остальное.',
+    ol: ['Загрузите документ', 'Выберите формат для конвертации', 'Скачайте готовый файл'],
+    icon: 'speed'
+  },
+  {
+    label: 'Редактирование',
+    p: 'Редактируйте PDF-файлы онлайн без необходимости установки программ:',
+    ul: ['Разделение файлов, удаление и поворот страниц', 'Cжатие документов', 'Установка и снятие пароля с PDF', 'Распознавание текста'],
+    icon: 'edit'
+  },
+  {
+    label: 'Безопасность',
+    p: 'Ваши файлы автоматически удаляются с наших серверов через 2 часа после завершения обработки, либо вы можете сами их удалить по нажатию кнопки. PDFStorm гарантирует конфиденциальность ваших данных.',
+    icon: 'safety'
+  },
+  {
+    label: 'Универсальность',
+    p: 'Создавайте именно те файлы, которые нужны для работы, учебы или личных проектов. Конвертируйте в:',
+    ul: ['DOCX (Word) для редактирования текста', 'JPG для извлечения изображений', 'PPTX (PowerPoint) для презентаций', 'Excel (XLSX) для работы с таблицами'],
+    icon: 'personal'
+  } 
+] %}
+
+<section class="bg-white">
+  <section class="py-5 border-b border-pale">
+    <header class="page-container flex flex-col laptop:flex-row items-center gap-y-2 gap-x-6">
+      <img class="w-[clamp(20.438rem,15.962rem+19.09vw,38.875rem)]" src="/resources/images/preview/pdf-converter.png" alt="Онлайн-конвертер PDF">
+      <section class="max-w-xl space-y-2 tablet:space-y-7">
+        <h2 class="text-center laptop:text-start text-30-36-864 text-primary font-semibold">Онлайн-конвертер PDF</h2>
+        <p class="text-lg"><strong>PDFStorm</strong> — онлайн-сервис для редактирования и конвертации PDF-файлов в любые популярные форматы. Получите нужный документ в несколько кликов — быстро, безопасно и с высоким качеством.</p>
+      </section>
+    </header>
+  </section>
+  <section class="py-5 tablet:py-10 page-container flex laptop:grid laptop:grid-cols-2 flex-col items-center laptop:items-start gap-5">
+    {% for advantage in advantages %}
+      {% include "resources/views/components/advantageList.njk" %}
+    {% endfor %}
+  </section>
+</section>

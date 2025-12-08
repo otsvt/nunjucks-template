@@ -1,0 +1,9 @@
+<nav id="menu-navigation-desktop" class="grow hidden laptop:block" >
+  <ul class="flex items-center gap-11">
+    {% for item in navItems %}
+      <li>
+        <a class="link" href="{{ item.href }}">{{ item.label }}</a>
+      </li>
+    {% endfor %} 
+  </ul>
+</nav>

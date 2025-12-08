@@ -1,0 +1,33 @@
+{% set navMain = [{ href: '#1', text: 'Конвертировация' }, { href: '#2', text: 'Редактирование' }, { href: '#3', text: 'Все инструменты' }] %}
+{% set navSecondary = [{ href: '#4', text: 'Пользовательское соглашение' }, { href: '#5', text: 'Политика конфиденциальности' }, { href: '#6', text: 'Статьи' }] %}
+
+<footer class="pt-8 laptop:pt-12 pb-12 laptop:pb-16 border-t border-pale bg-white">
+  <section class="page-container flex justify-between gap-6">
+    <section class="flex flex-col tablet:flex-row gap-y-8 gap-x-14 laptop:gap-x-28">
+      <div>
+        <span class="text-muted">© 2025</span>
+        <a class="text-primary-muted" href="/">PDFstorm</a>
+      </div>
+      <nav class="grow flex flex-col laptop:flex-row gap-y-2.5 gap-x-96">
+        <ul class="flex flex-col gap-y-2.5 laptop:gap-y-5">
+          {% for item in navMain %}
+            <li>
+              <a class="text-primary transition-opacity hover:opacity-80 active:opacity-80" href="{{ item.href }}">{{ item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul class="flex flex-col gap-y-2.5 laptop:gap-y-5">
+          {% for item in navSecondary %}
+            <li>
+              <a class="text-primary transition-opacity hover:opacity-80 active:opacity-80" href="{{ item.href }}">{{ item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </section>
+    <div>
+      {% set placement = 'top' %}
+      {% include "resources/views/components/menuLanguage.njk" %}
+    </div>
+  </section>
+</footer>
