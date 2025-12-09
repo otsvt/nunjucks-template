@@ -6,15 +6,15 @@
 {% endif %}
 
 {% if placement == 'top' %}
-  {% set menuPositionClass = 'bottom-[calc(100%+0.875rem)]' %}
+  {% set menuPositionClass = 'bottom-dropdown-offset' %}
 {% else %}
-  {% set menuPositionClass = 'top-[calc(100%+0.875rem)]' %}
+  {% set menuPositionClass = 'top-dropdown-offset' %}
 {% endif %}
 
 <section data-menu-language-root class="relative">
   <button data-menu-language-button class="flex items-center gap-2 cursor-pointer">
     <span data-menu-language-text class="text-xl uppercase text-accent transition-colors">{{ currentLanguage }}</span>
-    <div data-menu-language-icon-wrapper class="h-[22px] aspect-square flex items-center justify-center rounded-full bg-accent transition-colors">
+    <div data-menu-language-icon-wrapper class="h-5.5 aspect-square flex items-center justify-center rounded-full bg-accent transition-colors">
       <img data-menu-language-icon class="transition-transform" src="/resources/images/icons/caret-down.svg" alt="">
     </div>
   </button>

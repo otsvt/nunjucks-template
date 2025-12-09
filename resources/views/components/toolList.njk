@@ -1,184 +1,165 @@
 {% set tools = [
  {
     href: '#1',
-    showFrom: 'mobile',
     label: 'Word в PDF',
     description: 'Конвертация текстовых документов в PDF.',
     icon: 'pdf',                         
-    iconBg: 'bg-[#D2E4FF]',
-    activeBg: 'hover:bg-[#3581F2]',
-    iconClass: 'w-14 h-14 text-[#3581F2]',
-    arrowClass: 'w-3 h-3 text-[#3581F2]',
+    iconBg: 'bg-tool-word',
+    activeBg: 'hover:bg-tool-word-active',
+    iconClass: 'w-14 h-14 text-tool-word-active',
+    arrowClass: 'w-3 h-3 text-tool-word-active',
     facilities: [ 
-      { text: 'Конвертация DOC в PDF', icon: 'doc', iconClass: 'w-6 h-6 text-[#3581F2] transition-colors group-hover:text-white'},
-      { text: 'Конвертация DOCX в PDF', icon: 'doc', iconClass: 'w-6 h-6 text-[#3581F2] transition-colors group-hover:text-white'},
-      { text: 'Конвертация ODT в PDF', icon: 'doc', iconClass: 'w-6 h-6 text-[#3581F2] transition-colors group-hover:text-white'},
-      { text: 'Конвертация RTF в PDF', icon: 'doc', iconClass: 'w-6 h-6 text-[#3581F2] transition-colors group-hover:text-white'}
+      { text: 'Конвертация DOC в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
+      { text: 'Конвертация DOCX в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
+      { text: 'Конвертация ODT в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
+      { text: 'Конвертация RTF в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'}
     ] 
   },
   {
     href: '#2',
-    showFrom: 'mobile',
     label: 'PDF в Word',
     description: 'Конвертация PDF в редактируемые документы.',
     icon: 'doc',                         
-    iconBg: 'bg-[#B5E8FF]',
-    activeBg: 'hover:bg-[#00A8F7]',
-    iconClass: 'w-14 h-14 text-[#00A8F7]',
-    arrowClass: 'w-3 h-3 text-[#00A8F7]',
+    iconBg: 'bg-tool-pdf',
+    activeBg: 'hover:bg-tool-pdf-active',
+    iconClass: 'w-14 h-14 text-tool-pdf-active',
+    arrowClass: 'w-3 h-3 text-tool-pdf-active',
     facilities: [ 
-      { text: 'Конвертация PDF в DOC', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00A8F7] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в DOCX', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00A8F7] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в ODT', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00A8F7] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в RTF', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00A8F7] transition-colors group-hover:text-white'}
+      { text: 'Конвертация PDF в DOC', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
+      { text: 'Конвертация PDF в DOCX', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
+      { text: 'Конвертация PDF в ODT', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
+      { text: 'Конвертация PDF в RTF', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'}
     ] 
   },
   {
     href: '#3',
-    showFrom: 'mobile',
     label: 'Excel в PDF',
     description: 'Конвертация файлов таблиц в PDF.',
     icon: 'pdf',                         
-    iconBg: 'bg-[#C1FAC3]',
-    activeBg: 'hover:bg-[#05B10C]',
-    iconClass: 'w-14 h-14 text-[#05B10C]',
-    arrowClass: 'w-3 h-3 text-[#05B10C]',
+    iconBg: 'bg-tool-excel',
+    activeBg: 'hover:bg-tool-excel-active',
+    iconClass: 'w-14 h-14 text-tool-excel-active',
+    arrowClass: 'w-3 h-3 text-tool-excel-active',
     facilities: [ 
-      { text: 'Конвертация XLS в PDF', icon: 'file-exel', iconClass: 'w-6 h-6 text-[#05B10C] transition-colors group-hover:text-white'},
-      { text: 'Конвертация XLSX в PDF', icon: 'file-exel', iconClass: 'w-6 h-6 text-[#05B10C] transition-colors group-hover:text-white'},
-      { text: 'Конвертация ODS в PDF', icon: 'file-exel', iconClass: 'w-6 h-6 text-[#05B10C] transition-colors group-hover:text-white'}
+      { text: 'Конвертация XLS в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'},
+      { text: 'Конвертация XLSX в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'},
+      { text: 'Конвертация ODS в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'}
     ] 
   },
   {
     href: '#4',
     label: 'PowerPoint в PDF',
-    showFrom: 'tablet',
     description: 'Конвертация файлов презентаций в PDF.',
     icon: 'pdf',                         
-    iconBg: 'bg-[#FFDECA]',
-    activeBg: 'hover:bg-[#E46700]',
-    iconClass: 'w-14 h-14 text-[#E46700]',
-    arrowClass: 'w-3 h-3 text-[#E46700]',
+    iconBg: 'bg-tool-powpoint',
+    activeBg: 'hover:bg-tool-powpoint-active',
+    iconClass: 'w-14 h-14 text-tool-powpoint-active',
+    arrowClass: 'w-3 h-3 text-tool-powpoint-active',
     facilities: [ 
-      { text: 'Конвертация PPT в PDF', icon: 'presentation', iconClass: 'w-6 h-6 text-[#E46700] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PPTX в PDF', icon: 'presentation', iconClass: 'w-6 h-6 text-[#E46700] transition-colors group-hover:text-white'},
-      { text: 'Конвертация ODP в PDF', icon: 'presentation', iconClass: 'w-6 h-6 text-[#E46700] transition-colors group-hover:text-white'}
+      { text: 'Конвертация PPT в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'},
+      { text: 'Конвертация PPTX в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'},
+      { text: 'Конвертация ODP в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'}
     ] 
   },
   {
     href: '#5',
-    showFrom: 'laptop',
     label: 'Электронные книги',
     description: 'Конвертация электронных книг из/в PDF.',
     icon: 'ebook',                         
-    iconBg: 'bg-[#EADCFF]',
-    activeBg: 'hover:bg-[#8E43FF]',
-    iconClass: 'w-14 h-14 text-[#8E43FF]',
-    arrowClass: 'w-3 h-3 text-[#8E43FF]',
+    iconBg: 'bg-tool-ebook',
+    activeBg: 'hover:bg-tool-ebook-active',
+    iconClass: 'w-14 h-14 text-tool-ebook-active',
+    arrowClass: 'w-3 h-3 text-tool-ebook-active',
     facilities: [ 
-      { text: 'Конвертация DJVU в PDF', icon: 'ebook', iconClass: 'w-6 h-6 text-[#8E43FF] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в DJVU', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#8E43FF] transition-colors group-hover:text-white'},
-      { text: 'Конвертация EPUB в PDF', icon: 'ebook', iconClass: 'w-6 h-6 text-[#8E43FF] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в EPUB', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#8E43FF] transition-colors group-hover:text-white'},
-      { text: 'Конвертация FB2 в PDF', icon: 'ebook', iconClass: 'w-6 h-6 text-[#8E43FF] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в FB2', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#8E43FF] transition-colors group-hover:text-white'}
+      { text: 'Конвертация DJVU в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { text: 'Конвертация PDF в DJVU', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { text: 'Конвертация EPUB в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { text: 'Конвертация PDF в EPUB', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { text: 'Конвертация FB2 в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { text: 'Конвертация PDF в FB2', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'}
     ] 
   },
   {
     href: '#6',
-    showFrom: 'laptop',
     label: 'Картинки в PDF',
     description: 'Конвертация изображений в PDF.',
     icon: 'pdf',                         
-    iconBg: 'bg-[#FACCC1]',
-    activeBg: 'hover:bg-[#D51B11]',
-    iconClass: 'w-14 h-14 text-[#D51B11]',
-    arrowClass: 'w-3 h-3 text-[#D51B11]',
+    iconBg: 'bg-tool-img',
+    activeBg: 'hover:bg-tool-img-active',
+    iconClass: 'w-14 h-14 text-tool-img-active',
+    arrowClass: 'w-3 h-3 text-tool-img-active',
     facilities: [ 
-      { text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'w-6 h-6 text-[#D51B11] transition-colors group-hover:text-white'},
-      { text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'w-6 h-6 text-[#D51B11] transition-colors group-hover:text-white'},
-      { text: 'Конвертация Png в PDF', icon: 'picture', iconClass: 'w-6 h-6 text-[#D51B11] transition-colors group-hover:text-white'}
+      { text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'},
+      { text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'},
+      { text: 'Конвертация Png в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'}
     ] 
   },
   {
     href: '#7',
-    showFrom: 'laptop',
     label: 'Редактировать PDF',
     description: 'Изменение PDF файла.',
     icon: 'union',                         
-    iconBg: 'bg-[#C1FAF0]',
-    activeBg: 'hover:bg-[#00B9A9]',
-    iconClass: 'w-14 h-14 text-[#00B9A9]',
-    arrowClass: 'w-3 h-3 text-[#00B9A9]',
+    iconBg: 'bg-tool-edit',
+    activeBg: 'hover:bg-tool-edit-active',
+    iconClass: 'w-14 h-14 text-tool-edit-active',
+    arrowClass: 'w-3 h-3 text-tool-edit-active',
     facilities: [ 
-      { text: 'Организовать PDF', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00B9A9] transition-colors group-hover:text-white'},
-      { text: 'Повернуть PDF', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00B9A9] transition-colors group-hover:text-white'},
-      { text: 'Удаление страниц из PDF', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00B9A9] transition-colors group-hover:text-white'},
-      { text: 'Объединение PDF файлов', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00B9A9] transition-colors group-hover:text-white'},
-      { text: 'Разделение PDF', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00B9A9] transition-colors group-hover:text-white'},
-      { text: 'Извлечение страниц из тяжелых будней', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#00B9A9] transition-colors group-hover:text-white'}
+      { text: 'Организовать PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { text: 'Повернуть PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { text: 'Удаление страниц из PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { text: 'Объединение PDF файлов', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { text: 'Разделение PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { text: 'Извлечение страниц из тяжелых будней', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'}
     ] 
   },
   {
     href: '#8',
-    showFrom: 'laptop',
     label: 'PDF в картинки',
     description: 'Конвертация PDF в изображения.',
     icon: 'picture',                         
-    iconBg: 'bg-[#FFFCD2]',
-    activeBg: 'hover:bg-[#C4B100]',
-    iconClass: 'w-14 h-14 text-[#C4B100]',
-    arrowClass: 'w-3 h-3 text-[#C4B100]',
+    iconBg: 'bg-tool-pdfToImg',
+    activeBg: 'hover:bg-tool-pdfToImg-active',
+    iconClass: 'w-14 h-14 text-tool-pdfToImg-active',
+    arrowClass: 'w-3 h-3 text-tool-pdfToImg-active',
     facilities: [ 
-      { text: 'Конвертация PDF в Jpeg', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#C4B100] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в Png', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#C4B100] transition-colors group-hover:text-white'}
+      { text: 'Конвертация PDF в Jpeg', icon: 'pdf-file', iconClass: 'text-tool-pdfToImg-active tool-facility-icon'},
+      { text: 'Конвертация PDF в Png', icon: 'pdf-file', iconClass: 'text-tool-pdfToImg-active tool-facility-icon'}
     ] 
   },
   {
     href: '#9',
-    showFrom: 'tablet',
     label: 'Другие инструменты',
     icon: 'other-tools',                         
-    iconBg: 'bg-[#E7EFF5]',
-    activeBg: 'hover:bg-[#6A89A0]',
-    iconClass: 'w-14 h-14 text-[#6A89A0]',
-    arrowClass: 'w-3 h-3 text-[#6A89A0]',
+    iconBg: 'bg-tool-other',
+    activeBg: 'hover:bg-tool-other-active',
+    iconClass: 'w-14 h-14 text-tool-other-active',
+    arrowClass: 'w-3 h-3 text-tool-other-active',
     facilities: [ 
-      { text: 'Распознавание текста в PDF', icon: 'union', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'},
-      { text: 'Сделать PDF черно-белым', icon: 'union', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'},
-      { text: 'Веб-страница в PDF', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'},
-      { text: 'Конвертация PDF в PDF/A', icon: 'pdf-file', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'},
-      { text: 'Сжатие PDF', icon: 'union', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'}
+      { text: 'Распознавание текста в PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { text: 'Сделать PDF черно-белым', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { text: 'Веб-страница в PDF', icon: 'pdf-file', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { text: 'Конвертация PDF в PDF/A', icon: 'pdf-file', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { text: 'Сжатие PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'}
     ] 
   },
   {
     href: '#10',
-    showFrom: 'tablet',
     label: 'Безопасность PDF',
     icon: 'safety',                         
-    iconBg: 'bg-[#E7EFF5]',
-    activeBg: 'hover:bg-[#6A89A0]',
-    iconClass: 'w-14 h-14 text-[#6A89A0]',
-    arrowClass: 'w-3 h-3 text-[#6A89A0]',
+    iconBg: 'bg-tool-other',
+    activeBg: 'hover:bg-tool-other-active',
+    iconClass: 'w-14 h-14 text-tool-other-active',
+    arrowClass: 'w-3 h-3 text-tool-other-active',
     facilities: [ 
-      { text: 'Установка пароля в PDF', icon: 'union', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'},
-      { text: 'Удаление пароля из PDF', icon: 'union', iconClass: 'w-6 h-6 text-[#6A89A0] transition-colors group-hover:text-white'}
+      { text: 'Установка пароля в PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { text: 'Удаление пароля из PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'}
     ] 
   }
 ] %}
 
 <ul class="grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4">
   {% for tool in tools %}
-
-    {% if tool.showFrom == 'mobile' %}
-      {% set visibilityClass = '' %}
-    {% elseif tool.showFrom == 'tablet' %}
-      {% set visibilityClass = 'hidden tablet:block' %}
-    {% elseif tool.showFrom == 'laptop' %}
-      {% set visibilityClass = 'hidden laptop:block' %}
-    {% endif %}
-
-    <li class="{{ visibilityClass }}">
+    <li>
       <a href="{{tool.href}}">
         <article class="max-w-86 rounded-2xl bg-white shadow-tool overflow-hidden transition group hover:shadow-tool-active active:shadow-tool-active {{tool.activeBg}}">
           <header class="flex">

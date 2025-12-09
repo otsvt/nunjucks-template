@@ -13,6 +13,8 @@
   --font-inter: "Inter", sans-serif;
 
   --spacing-header-offset: 5.875rem;
+  --spacing-dropdown-offset: calc(100% + 0.875rem);
+  --spacing-advantage-img: clamp(20.438rem, 15.962rem + 19.09vw, 38.875rem);
   --spacing-30-60-1920: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
 
   --text-18-20-768: clamp(1.125rem, 1.006rem + 0.51vw, 1.25rem);
@@ -20,6 +22,8 @@
   --text-30-36-864: clamp(1.875rem, 1.587rem + 1.23vw, 2.25rem);
   --text-12-16-1680: clamp(0.75rem, 0.678rem + 0.31vw, 1rem);
   --text-30-60-1680: clamp(1.875rem, 1.336rem + 2.3vw, 3.75rem);
+
+  --radius-action: 3.5em;
 
   --color-main: #EDF4FF;
   --color-dark: #222222;
@@ -33,6 +37,25 @@
   --color-pale: #E5E6E6;
   --color-marker: #00A007;
 
+  --color-tool-word: #D2E4FF;
+  --color-tool-word-active: #3581F2;
+  --color-tool-pdf: #B5E8FF;
+  --color-tool-pdf-active: #00A8F7;
+  --color-tool-excel: #C1FAC3;
+  --color-tool-excel-active: #05B10C;
+  --color-tool-powpoint: #FFDECA;
+  --color-tool-powpoint-active: #E46700;
+  --color-tool-ebook: #EADCFF;
+  --color-tool-ebook-active: #8E43FF;
+  --color-tool-img: #FACCC1;
+  --color-tool-img-active: #D51B11;
+  --color-tool-edit: #C1FAF0;
+  --color-tool-edit-active: #00B9A9;
+  --color-tool-pdfToImg: #FFFCD2;
+  --color-tool-pdfToImg-active: #C4B100;
+  --color-tool-other: #E7EFF5;
+  --color-tool-other-active: #6A89A0;
+
   --shadow-header: 0px 1px 24px 0 rgba(38, 58, 78, 0.15);
   --shadow-action: 0 4px 15px 0 rgba(58, 84, 203, 0.2);
   --shadow-tool: 0px 24px 30px 0 rgba(212, 222, 231, 0.66);
@@ -45,6 +68,8 @@
       rgba(208, 226, 255, 0.75) 50%,
       #ffffff 100%);
   --background-image-pale-icon: linear-gradient(180deg, #EDF4FF 0%, #FFFFFF 100%);
+
+  --transition-property-max-height: max-height;
 }
 
 @layer components {
@@ -56,5 +81,9 @@
 @layer utilities {
   .page-container {
     @apply mx-auto px-6 tablet:px-0 w-full tablet:max-w-tablet laptop:max-w-laptop desktop:max-w-desktop;
+  }
+
+  .tool-facility-icon {
+    @apply w-6 h-6 transition-colors group-hover:text-white;
   }
 }
