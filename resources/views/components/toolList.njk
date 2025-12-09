@@ -1,6 +1,6 @@
 {% set tools = [
  {
-    href: '#1',
+    mainHref: '#1',
     label: 'Word в PDF',
     description: 'Конвертация текстовых документов в PDF.',
     icon: 'pdf',                         
@@ -9,14 +9,14 @@
     iconClass: 'w-14 h-14 text-tool-word-active',
     arrowClass: 'w-3 h-3 text-tool-word-active',
     facilities: [ 
-      { text: 'Конвертация DOC в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
-      { text: 'Конвертация DOCX в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
-      { text: 'Конвертация ODT в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
-      { text: 'Конвертация RTF в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация DOC в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация DOCX в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
+      { href: '#3', text: 'Конвертация ODT в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'},
+      { href: '#4', text: 'Конвертация RTF в PDF', icon: 'doc', iconClass: 'text-tool-word-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#2',
+    mainHref: '#2',
     label: 'PDF в Word',
     description: 'Конвертация PDF в редактируемые документы.',
     icon: 'doc',                         
@@ -25,14 +25,14 @@
     iconClass: 'w-14 h-14 text-tool-pdf-active',
     arrowClass: 'w-3 h-3 text-tool-pdf-active',
     facilities: [ 
-      { text: 'Конвертация PDF в DOC', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
-      { text: 'Конвертация PDF в DOCX', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
-      { text: 'Конвертация PDF в ODT', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
-      { text: 'Конвертация PDF в RTF', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация PDF в DOC', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация PDF в DOCX', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
+      { href: '#3', text: 'Конвертация PDF в ODT', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'},
+      { href: '#4', text: 'Конвертация PDF в RTF', icon: 'pdf-file', iconClass: 'text-tool-pdf-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#3',
+    mainHref: '#3',
     label: 'Excel в PDF',
     description: 'Конвертация файлов таблиц в PDF.',
     icon: 'pdf',                         
@@ -41,13 +41,13 @@
     iconClass: 'w-14 h-14 text-tool-excel-active',
     arrowClass: 'w-3 h-3 text-tool-excel-active',
     facilities: [ 
-      { text: 'Конвертация XLS в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'},
-      { text: 'Конвертация XLSX в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'},
-      { text: 'Конвертация ODS в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация XLS в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация XLSX в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'},
+      { href: '#3', text: 'Конвертация ODS в PDF', icon: 'file-exel', iconClass: 'text-tool-excel-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#4',
+    mainHref: '#4',
     label: 'PowerPoint в PDF',
     description: 'Конвертация файлов презентаций в PDF.',
     icon: 'pdf',                         
@@ -56,13 +56,13 @@
     iconClass: 'w-14 h-14 text-tool-powpoint-active',
     arrowClass: 'w-3 h-3 text-tool-powpoint-active',
     facilities: [ 
-      { text: 'Конвертация PPT в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'},
-      { text: 'Конвертация PPTX в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'},
-      { text: 'Конвертация ODP в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация PPT в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация PPTX в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'},
+      { href: '#3', text: 'Конвертация ODP в PDF', icon: 'presentation', iconClass: 'text-tool-powpoint-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#5',
+    mainHref: '#5',
     label: 'Электронные книги',
     description: 'Конвертация электронных книг из/в PDF.',
     icon: 'ebook',                         
@@ -71,16 +71,16 @@
     iconClass: 'w-14 h-14 text-tool-ebook-active',
     arrowClass: 'w-3 h-3 text-tool-ebook-active',
     facilities: [ 
-      { text: 'Конвертация DJVU в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
-      { text: 'Конвертация PDF в DJVU', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'},
-      { text: 'Конвертация EPUB в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
-      { text: 'Конвертация PDF в EPUB', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'},
-      { text: 'Конвертация FB2 в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
-      { text: 'Конвертация PDF в FB2', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация DJVU в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация PDF в DJVU', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { href: '#3', text: 'Конвертация EPUB в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { href: '#4', text: 'Конвертация PDF в EPUB', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { href: '#5', text: 'Конвертация FB2 в PDF', icon: 'ebook', iconClass: 'text-tool-ebook-active tool-facility-icon'},
+      { href: '#6', text: 'Конвертация PDF в FB2', icon: 'pdf-file', iconClass: 'text-tool-ebook-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#6',
+    mainHref: '#6',
     label: 'Картинки в PDF',
     description: 'Конвертация изображений в PDF.',
     icon: 'pdf',                         
@@ -89,13 +89,13 @@
     iconClass: 'w-14 h-14 text-tool-img-active',
     arrowClass: 'w-3 h-3 text-tool-img-active',
     facilities: [ 
-      { text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'},
-      { text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'},
-      { text: 'Конвертация Png в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация Jpeg в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'},
+      { href: '#3', text: 'Конвертация Png в PDF', icon: 'picture', iconClass: 'text-tool-img-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#7',
+    mainHref: '#7',
     label: 'Редактировать PDF',
     description: 'Изменение PDF файла.',
     icon: 'union',                         
@@ -104,16 +104,16 @@
     iconClass: 'w-14 h-14 text-tool-edit-active',
     arrowClass: 'w-3 h-3 text-tool-edit-active',
     facilities: [ 
-      { text: 'Организовать PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
-      { text: 'Повернуть PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
-      { text: 'Удаление страниц из PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
-      { text: 'Объединение PDF файлов', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
-      { text: 'Разделение PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
-      { text: 'Извлечение страниц из тяжелых будней', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'}
+      { href: '#1', text: 'Организовать PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { href: '#2', text: 'Повернуть PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { href: '#3', text: 'Удаление страниц из PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { href: '#4', text: 'Объединение PDF файлов', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { href: '#5', text: 'Разделение PDF', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'},
+      { href: '#6', text: 'Извлечение страниц из тяжелых будней', icon: 'pdf-file', iconClass: 'text-tool-edit-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#8',
+    mainHref: '#8',
     label: 'PDF в картинки',
     description: 'Конвертация PDF в изображения.',
     icon: 'picture',                         
@@ -122,12 +122,12 @@
     iconClass: 'w-14 h-14 text-tool-pdfToImg-active',
     arrowClass: 'w-3 h-3 text-tool-pdfToImg-active',
     facilities: [ 
-      { text: 'Конвертация PDF в Jpeg', icon: 'pdf-file', iconClass: 'text-tool-pdfToImg-active tool-facility-icon'},
-      { text: 'Конвертация PDF в Png', icon: 'pdf-file', iconClass: 'text-tool-pdfToImg-active tool-facility-icon'}
+      { href: '#1', text: 'Конвертация PDF в Jpeg', icon: 'pdf-file', iconClass: 'text-tool-pdfToImg-active tool-facility-icon'},
+      { href: '#2', text: 'Конвертация PDF в Png', icon: 'pdf-file', iconClass: 'text-tool-pdfToImg-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#9',
+    mainHref: '#9',
     label: 'Другие инструменты',
     icon: 'other-tools',                         
     iconBg: 'bg-tool-other',
@@ -135,15 +135,15 @@
     iconClass: 'w-14 h-14 text-tool-other-active',
     arrowClass: 'w-3 h-3 text-tool-other-active',
     facilities: [ 
-      { text: 'Распознавание текста в PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
-      { text: 'Сделать PDF черно-белым', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
-      { text: 'Веб-страница в PDF', icon: 'pdf-file', iconClass: 'text-tool-other-active tool-facility-icon'},
-      { text: 'Конвертация PDF в PDF/A', icon: 'pdf-file', iconClass: 'text-tool-other-active tool-facility-icon'},
-      { text: 'Сжатие PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'}
+      { href: '#1', text: 'Распознавание текста в PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { href: '#2', text: 'Сделать PDF черно-белым', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { href: '#3', text: 'Веб-страница в PDF', icon: 'pdf-file', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { href: '#4', text: 'Конвертация PDF в PDF/A', icon: 'pdf-file', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { href: '#5', text: 'Сжатие PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'}
     ] 
   },
   {
-    href: '#10',
+    mainHref: '#10',
     label: 'Безопасность PDF',
     icon: 'safety',                         
     iconBg: 'bg-tool-other',
@@ -151,8 +151,8 @@
     iconClass: 'w-14 h-14 text-tool-other-active',
     arrowClass: 'w-3 h-3 text-tool-other-active',
     facilities: [ 
-      { text: 'Установка пароля в PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
-      { text: 'Удаление пароля из PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'}
+      { href: '#1', text: 'Установка пароля в PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'},
+      { href: '#2', text: 'Удаление пароля из PDF', icon: 'union', iconClass: 'text-tool-other-active tool-facility-icon'}
     ] 
   }
 ] %}
@@ -160,46 +160,50 @@
 <ul class="grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4">
   {% for tool in tools %}
     <li>
-      <a href="{{tool.href}}">
-        <article class="max-w-86 rounded-2xl bg-white shadow-tool overflow-hidden transition group hover:shadow-tool-active active:shadow-tool-active {{tool.activeBg}}">
-          <header class="flex">
-            <section class="py-7 pl-6 pr-4 space-y-1">
-            <h3 class="text-2xl text-secondary font-bold transition-colors group-hover:text-white">{{ tool.label }}</h3>
-            <span class="text-lg text-muted transition-colors group-hover:text-white">{{ tool.description }}</span>
-            </section>
-            <div class="shrink-0 w-25"> 
-              <div class="relative w-full aspect-square flex items-center justify-center rounded-bl-2xl {{tool.iconBg}}">
-                {% set iconClass = tool.iconClass %}
-                {% include "resources/views/icons/" + tool.icon + ".njk" %}
-                <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 h-8 w-8 opacity-0 flex items-center justify-center rounded-full bg-white shadow-tool-decore transition-opacity group-hover:opacity-100">
-                  {% set iconClass = tool.arrowClass %}
-                  {% include "resources/views/icons/arrow-right.njk" %}
-              </div>
-              </div>
-            </div>
+      <article class="max-w-86 rounded-2xl bg-white shadow-tool overflow-hidden transition group hover:shadow-tool-active active:shadow-tool-active {{tool.activeBg}}">
+        <a class="flex transition-colors hover:bg-black/20" href="{{ tool.mainHref }}">
+          <header class="pt-10 pl-9.5 pr-4 flex flex-col gap-1" >
+            <h3 class="h-14.5 flex items-center text-2xl text-secondary font-bold transition-colors group-hover:text-white">{{ tool.label }}</h3>
+            <span class="text-lg leading-thin text-muted transition-colors group-hover:text-white 
+              {% if tool.description %}
+                h-20
+              {% else %}
+                h-6
+              {% endif %}
+            ">{{ tool.description }}</span>
           </header>
-          <menu class="flex flex-col">
-            {% for facility in tool.facilities %}
-              <li>
-                <section class="relative pl-6 pr-2 flex items-center gap-2.5 
-                  {% if loop.last %}
-                    pt-3.5 pb-5
-                  {% else %}
-                    py-3.5
-                  {% endif %}
-                ">
-                  {% set iconClass = facility.iconClass %}
-                  {% include "resources/views/icons/" + facility.icon + ".njk" %}
-                  <h4 class="text-lg font-medium transition-colors group-hover:text-white truncate">{{ facility.text }}</h4>
-                  {% if loop.index is odd %}
-                    <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
-                  {% endif %}
-                </section>
-              </li>
-            {% endfor %}
-          </menu>
-        </article>
-      </a>
+          <div class="shrink-0 w-25"> 
+            <div class="relative w-full aspect-square flex items-center justify-center rounded-bl-2xl {{tool.iconBg}}">
+              {% set iconClass = tool.iconClass %}
+              {% include "resources/views/icons/" + tool.icon + ".njk" %}
+              <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 h-8 w-8 opacity-0 flex items-center justify-center rounded-full bg-white shadow-tool-decore transition-opacity group-hover:opacity-100">
+                {% set iconClass = tool.arrowClass %}
+                {% include "resources/views/icons/arrow-right.njk" %}
+            </div>
+            </div>
+          </div>
+        </a>
+        <menu class="flex flex-col">
+          {% for facility in tool.facilities %}
+            <li>
+              <a href="{{ facility.href }}" class="relative pl-6 pr-2 flex items-center gap-2.5 transition-colors hover:bg-black/20
+                {% if loop.last %}
+                  pt-3.5 pb-5
+                {% else %}
+                  py-3.5
+                {% endif %}
+              ">
+                {% set iconClass = facility.iconClass %}
+                {% include "resources/views/icons/" + facility.icon + ".njk" %}
+                <span class="text-lg font-medium transition-colors group-hover:text-white truncate">{{ facility.text }}</span>
+                {% if loop.index is odd %}
+                  <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </menu>
+      </article>
     </li>
   {% endfor %}
 </ul>

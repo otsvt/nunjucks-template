@@ -23,6 +23,8 @@
   --text-12-16-1680: clamp(0.75rem, 0.678rem + 0.31vw, 1rem);
   --text-30-60-1680: clamp(1.875rem, 1.336rem + 2.3vw, 3.75rem);
 
+  --leading-thin: 1.1;
+
   --radius-action: 3.5em;
 
   --color-main: #EDF4FF;
