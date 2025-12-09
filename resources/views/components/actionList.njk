@@ -12,7 +12,7 @@
 <ul class="flex flex-wrap gap-2">
   {% for action in actionItems %}
     <li>
-      <a class="py-1 px-2 flex items-center justify-center text-12-16-1680 rounded-action shadow-action transition-opacity hover:opacity-80 active:opacity-80
+      <a class="py-1 laptop:py-1.5 px-2 laptop:px-3 flex items-center justify-center text-xs laptop:text-base leading-4 laptop:leading-6 laptop:font-medium rounded-action shadow-action transition-opacity hover:opacity-80 active:opacity-80
         {% if action.label === currentAction %}
           text-primary-active bg-white
         {% else %}
