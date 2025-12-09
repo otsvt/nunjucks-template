@@ -1,3 +1,4 @@
+{% import "resources/views/components/spriteIcon.njk" as Icon %}
 {% set tools = [
  {
     mainHref: '#1',
@@ -162,7 +163,7 @@
     <li>
       <article class="max-w-86 rounded-2xl bg-white shadow-tool overflow-hidden transition group hover:shadow-tool-active active:shadow-tool-active {{tool.activeBg}}">
         <a class="flex transition-colors hover:bg-black/20" href="{{ tool.mainHref }}">
-          <header class="pt-10 pl-9.5 pr-4 flex flex-col gap-1" >
+          <header class="pt-9 pl-9.5 pr-4 flex flex-col gap-2" >
             <h3 class="h-14.5 flex items-center text-2xl text-secondary font-bold transition-colors group-hover:text-white">{{ tool.label }}</h3>
             <span class="text-lg leading-thin text-muted transition-colors group-hover:text-white 
               {% if tool.description %}
@@ -174,11 +175,9 @@
           </header>
           <div class="shrink-0 w-25"> 
             <div class="relative w-full aspect-square flex items-center justify-center rounded-bl-2xl {{tool.iconBg}}">
-              {% set iconClass = tool.iconClass %}
-              {% include "resources/views/icons/" + tool.icon + ".njk" %}
+              {{ Icon.sprite(tool.icon, tool.iconClass) }}
               <div class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 h-8 w-8 opacity-0 flex items-center justify-center rounded-full bg-white shadow-tool-decore transition-opacity group-hover:opacity-100">
-                {% set iconClass = tool.arrowClass %}
-                {% include "resources/views/icons/arrow-right.njk" %}
+               {{ Icon.sprite('arrow-right', tool.arrowClass) }}
             </div>
             </div>
           </div>
@@ -186,15 +185,14 @@
         <menu class="flex flex-col">
           {% for facility in tool.facilities %}
             <li>
-              <a href="{{ facility.href }}" class="relative pl-6 pr-2 flex items-center gap-2.5 transition-colors hover:bg-black/20
+              <a href="{{ facility.href }}" class="relative pl-6 pr-4 flex items-center gap-2.5 transition-colors hover:bg-black/20
                 {% if loop.last %}
                   pt-3.5 pb-5
                 {% else %}
                   py-3.5
                 {% endif %}
               ">
-                {% set iconClass = facility.iconClass %}
-                {% include "resources/views/icons/" + facility.icon + ".njk" %}
+                {{ Icon.sprite(facility.icon, facility.iconClass) }}
                 <span class="text-lg font-medium transition-colors group-hover:text-white truncate">{{ facility.text }}</span>
                 {% if loop.index is odd %}
                   <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
