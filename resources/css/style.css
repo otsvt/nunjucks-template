@@ -14,9 +14,11 @@
 
   --spacing-header-offset: 5.875rem;
   --spacing-dropdown-offset: calc(100% + 0.875rem);
+  --spacing-hero: 46rem;
   --spacing-advantage-img: clamp(20.438rem, 15.962rem + 19.09vw, 38.875rem);
   --spacing-30-60-1920: clamp(1.875rem, 1.42rem + 1.94vw, 3.75rem);
 
+  --text-3xxl: 2.5rem;
   --text-18-20-768: clamp(1.125rem, 1.006rem + 0.51vw, 1.25rem);
   --text-24-30-864: clamp(1.5rem, 1.212rem + 1.23vw, 1.875rem);
   --text-30-36-864: clamp(1.875rem, 1.587rem + 1.23vw, 2.25rem);
